@@ -71,7 +71,8 @@ UpNote の書き出しで渡される。形は `knowledge/UpNote渡しの型.md`
 
 ## git
 
-- **親（C:/00_CreatorStage）の git は、決まり・記憶・一覧（AGENTS.md・AI_Memory・knowledge・Library の index.json と links.json・tech）だけ。** 案件（Projects/*/）と画像の実物は .gitignore で外す
-- **案件はそれぞれ自分の git を持つ**（Projects/<案件>/ で git init）。本格リリースの時は、その案件の git に送り先（GitHub など）を作る（外へ送るので利用者に聞く）
-- なぜ：前に親フォルダーの git でまとめて管理したら大変だった（利用者）。案件を外へ移す・送る時に、親の履歴と絡まない
-- 画像の実物の控えは git でなく、別の控え（E: など）で。決めるのは利用者
+- 送り先：https://github.com/SHUNSUKE-Ks/00_CreatorStage（利用者が作った。push は利用者に聞いてから）
+- **作っている途中の物（アイデア・制作途中の案件）は、親（C:/00_CreatorStage）の git に入れる。** クラウドで動く AI の開発でも、過去の資料と途中の案件が見えるように。node_modules・dist・.env は入れない
+- **画像・動画の実物は親の git に入れない**（Library/images の index.json だけ入れる）。クラウドから画像が要るようになったら、利用者と決め直す
+- **リリースして運用する物（例：公開した HP）は、自分の git に独立させる。** 独立させたら、CS の `knowledge/リリース台帳.md` に1行（名前・独立先のフォルダー・送り先の URL・独立した日・元の CS の場所）を書き、CC の registry.json にも登記する。元の場所には `MOVED.md`（独立先）を残す
+- なぜ：前の Master の時、親フォルダーの git でまとめて運用まで管理したら大変だった。どこへ行ったか分からなくなった（利用者）。途中は1か所、運用は独立、行き先は台帳、と分ける

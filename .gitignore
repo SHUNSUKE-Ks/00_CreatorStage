@@ -3,8 +3,10 @@ dist/
 .env
 *.local
 
-# 親の git は「決まり・記憶・一覧」だけ。案件はそれぞれ自分の git を持つ（2026-10-12）
-Projects/*/
+# 作っている途中の案件は親の git に入れる（クラウドの開発でも見えるように）。リリースした案件は外へ独立させる（2026-10-12）
+**/node_modules/
+**/dist/
+**/.env*
 # 画像・動画などの実物は git に入れない（一覧 index.json だけ入れる）
 Library/images/**
 !Library/images/
