@@ -2,3 +2,10 @@ node_modules/
 dist/
 .env
 *.local
+
+# 親の git は「決まり・記憶・一覧」だけ。案件はそれぞれ自分の git を持つ（2026-10-12）
+Projects/*/
+# 画像・動画などの実物は git に入れない（一覧 index.json だけ入れる）
+Library/images/**
+!Library/images/
+!Library/images/index.json
